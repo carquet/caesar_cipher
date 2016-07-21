@@ -1,11 +1,15 @@
 def solve_cipher(input, n)
 	split_into_an_array = input.split('')
-	split_into_an_array.each do |letter| shift = letter.ord + n
-	print shift.chr
+	shift = []
+	for letter in split_into_an_array
+		if letter == " "
+			shift << " "
+		else
+			shift << letter.ord + n
+		end
 	end
 	
-
-
+	print shift
 end
 
-print solve_cipher("ifmmp", -1)
+solve_cipher("p| uhdo qdph lv grqdog gxfn", -3)
